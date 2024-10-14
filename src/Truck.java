@@ -14,10 +14,8 @@ public class Truck extends Transport implements Maintainable {
 
     @Override
     public void check() {
-        System.out.println("Обслуживаем " + modelName);
-        for (int i = 0; i < wheelsCount; i++) {
-            updateTyre();
-        }
+        System.out.println("Обслуживаем " + getModelName());
+        super.check();
         checkEngine();
         checkTrailer();
     }
